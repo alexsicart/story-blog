@@ -23,7 +23,7 @@ class PostsIndex extends Component {
         <div key={post.id}>
         <tr>
           <Link to={`/posts/${post.id}`}>
-            {post.title}
+            <h2>{post.title}</h2>
           </Link>
         </tr>
         </div>
@@ -35,20 +35,21 @@ class PostsIndex extends Component {
   render() {
     return (
       <div>
-        <div className="text-xs-right">
+        <div className="container">
         <br />
-          <Link className="btn btn-primary" to="/posts/new">
+          <Link className="button button-primary" to="/posts/new">
             Add a Post
           </Link>
         </div>
         <br />
-        <h3>Sicart Story Posts</h3>
+        <h1>Sicart Story Posts</h1>
         <br />
         <table class="u-full-width">
         <tbody>
           {this.renderPosts()}
           </tbody>
           </table>
+          <hr />
       </div>
     );
   }
